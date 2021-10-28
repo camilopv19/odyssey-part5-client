@@ -29,7 +29,7 @@ mutation IncrementTrackViewsMutation($incrementTrackViewsId: ID!) {
  * for each track populating the tracks grid homepage.
  */
 const TrackCard = ({ track }) => {
-  const { title, thumbnail, author, length, modulesCount, id } = track;
+  const { title, thumbnail, author, durationInSeconds, modulesCount, id } = track;
 
   const [incrementTrackViews] = useMutation(INCREMENT_TRACK_VIEW, {
     variables: {
@@ -55,7 +55,7 @@ const TrackCard = ({ track }) => {
               <AuthorName>{author.name}</AuthorName>
               <TrackLength>
                 {modulesCount} modules -{' '}
-                {humanReadableTimeFromSeconds(length)}
+                {humanReadableTimeFromSeconds(durationInSeconds)}
               </TrackLength>
             </AuthorAndTrack>
           </CardFooter>

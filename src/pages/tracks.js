@@ -13,7 +13,7 @@ query Query {
       id
       photo
     }
-    length
+    durationInSeconds
     modulesCount
     title
     thumbnail

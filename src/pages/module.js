@@ -11,7 +11,7 @@ query Query($moduleId: ID!, $trackId: ID!) {
     module(id: $moduleId) {
       id
       title
-      length
+      durationInSeconds
       content
       videoUrl
     }
@@ -21,7 +21,7 @@ query Query($moduleId: ID!, $trackId: ID!) {
       modules {
         id
         title
-        length
+        durationInSeconds
       }
     }
   }
